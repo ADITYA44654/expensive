@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 225 15% 6%;
+    --foreground: 210 20% 96%;
+
+    --card: 225 12% 10%;
+    --card-foreground: 210 20% 96%;
+
+    --popover: 225 12% 12%;
+    --popover-foreground: 210 20% 96%;
+
+    --primary: 160 84% 44%;
+    --primary-foreground: 225 15% 6%;
+
+    --secondary: 225 10% 15%;
+    --secondary-foreground: 210 15% 80%;
+
+    --muted: 225 8% 18%;
+    --muted-foreground: 225 8% 52%;
+
+    --accent: 225 10% 15%;
+    --accent-foreground: 210 20% 96%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --income: 160 84% 44%;
+    --income-foreground: 225 15% 6%;
+    --expense: 0 75% 55%;
+    --expense-foreground: 0 0% 100%;
+
+    --border: 225 10% 16%;
+    --input: 225 10% 16%;
+    --ring: 160 84% 44%;
+
+    --radius: 0.875rem;
+
+    --sidebar-background: 225 12% 8%;
+    --sidebar-foreground: 210 15% 80%;
+    --sidebar-primary: 160 84% 44%;
+    --sidebar-primary-foreground: 225 15% 6%;
+    --sidebar-accent: 225 10% 15%;
+    --sidebar-accent-foreground: 210 20% 96%;
+    --sidebar-border: 225 10% 16%;
+    --sidebar-ring: 160 84% 44%;
+
+    --glass-bg: 225 15% 10% / 0.6;
+    --glass-border: 225 15% 20% / 0.3;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: hsla(var(--glass-bg));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsla(var(--glass-border));
+  }
+
+  .glass-subtle {
+    background: hsla(var(--glass-bg));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid hsla(var(--glass-border));
+  }
+}
